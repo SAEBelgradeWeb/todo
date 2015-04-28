@@ -1,10 +1,10 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\TodoFormRequest;
 use App\Http\Controllers\Controller;
 use App\Todo;
-
-use Illuminate\Http\Request;
+use Request;
 
 class TodoController extends Controller {
 
@@ -36,9 +36,12 @@ class TodoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(TodoFormRequest $request)
 	{
-		//
+
+		Todo::create(Request::all());
+
+		
 	}
 
 	/**

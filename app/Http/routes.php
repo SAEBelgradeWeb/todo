@@ -12,8 +12,8 @@
 */
 
 Route::get('/', 'TodoController@index');
-
 Route::get('/create', 'TodoController@create');
+Route::post('/', 'TodoController@store');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
