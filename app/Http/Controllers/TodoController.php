@@ -18,7 +18,7 @@ class TodoController extends Controller {
 
 		$todos = Todo::where('user_id', 1)->with(['status'])->get();
 		
-		return view('todo', compact('todos'));
+		return view('todo.read', compact('todos'));
 	}
 
 	/**
@@ -28,7 +28,7 @@ class TodoController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('todo.create');
 	}
 
 	/**

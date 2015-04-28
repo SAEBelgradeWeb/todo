@@ -13,7 +13,7 @@
 
 Route::get('/', 'TodoController@index');
 
-
+Route::get('/create', 'TodoController@create');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
